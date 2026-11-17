@@ -1,6 +1,6 @@
 def show_question(question: str, options: list[str]) -> None:
     """
-    Show's a question to the user with given options.
+    Shows a question to the user with the given options.
 
     Args:
         question (str): Text of the question to show.
@@ -9,8 +9,9 @@ def show_question(question: str, options: list[str]) -> None:
     Returns:
         None
     """
-    print(question)
+    print("\n" + question)
 
     print("Choose an option:")
-    for index, option in enumerate(options):
+    # Empezamos en 1 para que coincida con el campo "correct"
+    for index, option in enumerate(options, start=1):
         print(index, option)

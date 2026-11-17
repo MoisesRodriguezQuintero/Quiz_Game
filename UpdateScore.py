@@ -1,11 +1,14 @@
-def update_score(result: bool) -> None:
+def update_score(score: int, result: bool) -> int:
     """
-    Calls check_answer() to check if the answer is correct and
-    adds points to the user if that's the case
+    Adds one point to the score if the answer was correct.
 
     Args:
-    result (bool): Defines whether the answer is correct or not
+        score (int): Current score.
+        result (bool): Whether the answer was correct.
 
     Returns:
-    None
+        int: The updated score.
     """
+    if result:
+        return score + 1
+    return score
