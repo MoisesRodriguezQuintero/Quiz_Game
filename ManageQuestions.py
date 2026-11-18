@@ -1,14 +1,11 @@
 import random
 
 
-def manage_questions(questions:str, number_questions:int):
-    selected_questions = []
-    while len(selected_questions) < number_questions:
-        question = random.choice(questions)
+def manage_questions(questions: list, number_questions: int) -> list:
+    # random.sample elige preguntas distintas y nunca se queda en un bucle infinito
+    number_questions = min(number_questions, len(questions))
+    return random.sample(questions, number_questions)
 
-        if question not in selected_questions:
-            selected_questions.append(question)
-    return selected_questions
 
 questions = [
     {

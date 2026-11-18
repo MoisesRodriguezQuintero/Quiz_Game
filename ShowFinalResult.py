@@ -2,7 +2,7 @@ def show_final_result(score, total_questions, percentage):
     print("\n===== FINAL RESULT =====")
     print("Your score:", score)
     print("Total questions:", total_questions)
-    print("Correct answers:", percentage, "%")
+    print("Percentage of correct answers:", round(percentage, 1), "%")
 
     if percentage >= 80:
         print("Excellent! You did a great job!")
